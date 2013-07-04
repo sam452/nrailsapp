@@ -9,7 +9,8 @@ describe User do
       :password => "changeme",
       :password_confirmation => "changeme",
       :company => "Comany",
-      :telephone => "123-456-7890"
+      :telephone => "123-456-7890",
+      :feet_of_pipe => "Less than 100"
     }
   end
 
