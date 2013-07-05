@@ -1,0 +1,17 @@
+<%= simple_form_for @user do |f| %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :company %>
+  <%= f.input :telephone, as: :tel%>
+  <%= f.input :industry %>
+  <%= f.input :city %>
+  <%= f.input :state, collection: ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"] %>
+  <%= f.input :feet_of_pipe, collection: [['Less than 100\''], ['100\' to 500\''], ['500\' to 1,000\''], ['1,000\' to 5,000\''], ['Greater than 5,000\'']] %>
+  <%= f.collection_check_boxes :existing_pipe_material, [[true, 'Less than 100\''],[false, '100\' to 500\''], [false, '500\' to 1,000\''], [false, '1,000\' to 5,000\'']], :first, :last %>
+  <%= f.collection_check_boxes :existing_pipe_function, [['Storm Water'],['Sewer'], ['Potable Water'], ['Process Discharge']], :first, :last %>
+  <%= f.collection_check_boxes :existing_pipe_diameters, [['Less than 8"'], ['8" to 72"'], ['Greater than 72"']], :first, :last %>
+  <%= f.collection_check_boxes :need, [['Assessment'], ['TV & Clean'], ['Maintenance & Repair Plan'], ['Repair Existing Pipe']], :first, :last %>
+  <%= f.input :message %>
+  <%= f.button :submit %>
+<% end %>
+

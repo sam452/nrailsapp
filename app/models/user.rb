@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :company, :telephone, :industry, :city, :state, :feet_of_pipe, :existing_pipe_material, :existing_pipe_function, :need, :message
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :company, :telephone, :industry, :city, :state, :feet_of_pipe, :existing_pipe_material, :existing_pipe_function, :need, :message, :existing_pipe_diameters
 end
